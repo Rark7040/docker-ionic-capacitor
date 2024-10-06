@@ -18,7 +18,7 @@ ARG IONIC_VERSION=7.2.0
 ARG CAPACITOR_VERSION=6.0.0
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV LANG=en_US.UTF-8
+ENV LANG=ja_JP.UTF-8
 
 WORKDIR /tmp
 
@@ -40,7 +40,7 @@ RUN apt-get install -qy \
     openjdk-${JAVA_VERSION}-jdk
 
 # Set locale
-RUN locale-gen en_US.UTF-8 && update-locale
+RUN locale-gen ${LANG} && update-locale
 
 # Install Gradle
 ENV GRADLE_HOME=/opt/gradle
