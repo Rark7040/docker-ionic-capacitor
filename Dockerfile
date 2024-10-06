@@ -22,7 +22,7 @@ ENV LANG=ja_JP.UTF-8
 
 WORKDIR /tmp
 
-RUN apt-get update -q
+RUN apt-get update -qy
 
 # General packages
 RUN apt-get install -qy \
